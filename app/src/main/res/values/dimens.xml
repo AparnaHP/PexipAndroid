@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gap_20">20dp</dimen>
+    <dimen name="pexipSmallButton">60dp</dimen>
+    <dimen name="pexipLargeButton">80dp</dimen>
+    <dimen name="pexipWebViewHieght">300dp</dimen>
+</resources>

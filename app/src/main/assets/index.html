@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/event-source-polyfill.js"></script>
+<script type="text/javascript" src="scripts/script.js" ></script>
+<script type='text/javascript'>
+
+function init(node,conference,domain,bw,username)
+{
+    initialiseJSAPI(node,conference,domain,bw,username);
+}
+
+function orientation(isPortrait)
+{
+    if(isPortrait)
+    {
+    document.getElementById('self-video').setAttribute("style","width:25%;height:45%");
+    }
+    else
+    {
+    document.getElementById('self-video').setAttribute("style","width:15%;height:35%");
+    }
+}
+
+</script>
+
+<style>
+  .conferenceView {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+    object-fit: cover;
+  }
+
+  .selfView {
+    width: 25%;
+    height: 45%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index:1;
+    object-fit: fill;
+    -webkit-transform: scale(-1, 1);
+   }
+
+</style>
+</head>
+<body>
+<div id="viewport">
+        <div id="conference-container">
+            <video id="conference-video" class="conferenceView" poster="null" autoplay muted></video>
+        </div>
+
+        <div id="self-container">
+            <video id="self-video" class="selfView" poster="null" autoplay muted></video>
+        </div>
+
+</div>
+</body>
+</html>

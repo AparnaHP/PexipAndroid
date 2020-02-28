@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/gap_20"
+        android:layout_marginTop="@dimen/gap_20"
+        android:layout_marginStart="@dimen/gap_20">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@null"
+            android:layout_marginStart="-10dp"
+            android:scaleType="center"
+            android:background="@drawable/back_left"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/meetingName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/font_color"
+            android:text="Meeting Name" />
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/webViewLayout"
+            android:layout_width="match_parent"
+            android:layout_below="@id/headerBar"
+            android:layout_marginTop="@dimen/gap_20"
+            android:gravity="bottom|center"
+            android:layout_height="@dimen/pexipWebViewHieght">
+
+                    <WebView
+                        android:id="@+id/webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"
+                    />
+
+                    <ImageButton
+                        android:id="@+id/toggle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/switch_camera"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:padding="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/gap_20"
+                        android:src="@drawable/camera_switch" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/controlPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/webViewLayout"
+            android:layout_marginBottom="@dimen/gap_20"
+            android:layout_marginTop="40dp">
+
+        <ImageButton
+            android:id="@+id/muteAudioButton"
+            android:layout_width="@dimen/pexipSmallButton"
+            android:layout_height="@dimen/pexipSmallButton"
+            android:background="@drawable/pexip_small_button"
+            android:tag="1"
+            android:src="@drawable/microphone"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="@dimen/gap_20"
+            android:contentDescription="@string/on_off_microphone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/endCallButton"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/endCallButton"
+                android:layout_width="@dimen/pexipLargeButton"
+                android:layout_height="@dimen/pexipLargeButton"
+                android:background="@drawable/pexip_large_button"
+                android:src="@drawable/phone_hangup"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="@dimen/gap_20"
+                android:layout_marginEnd="@dimen/gap_20"
+                android:contentDescription="@string/end_call"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/muteVideoButton"
+                app:layout_constraintLeft_toRightOf="@id/muteAudioButton"
+                />
+
+        <ImageButton
+            android:id="@+id/muteVideoButton"
+            android:layout_width="@dimen/pexipSmallButton"
+            android:layout_height="@dimen/pexipSmallButton"
+            android:background="@drawable/pexip_small_button"
+            android:tag="1"
+            android:src="@drawable/video"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="@dimen/gap_20"
+            android:contentDescription="@string/on_off_video"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/endCallButton"/>
+        </LinearLayout>
+
+
+</RelativeLayout>

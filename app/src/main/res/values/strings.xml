@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pexip POC</string>
+
+    <!-- translatable -->
+    <!-- skype for business -->
+    <string name="cannot_start_meeting">Cannot start the meeting</string>
+    <string name="on_off_video">On/Off Video</string>
+    <string name="on_off_microphone">On/Off Microphone</string>
+    <string name="switch_camera">Switch front/back cameras</string>
+    <string name="end_call">End call</string>
+    <string name="back">Go to previous screen</string>
+
+    <!--run time-->
+    <string name="phonePermission">Permission to make video calls and record audio</string>
+    <string name="permissionDenied">Permission Denied. Go to settings to allow</string>
+    <string name="grant">Grant</string>
+    <string name="deny">Deny</string>
+</resources>

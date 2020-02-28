@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pexip.android.wrapper">
+
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.AppCompat.Light"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <activity
+            android:name="com.pexip.android.wrapper.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.pexip.android.wrapper.PexipCustomizedView"
+            android:exported="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity
+            android:name="com.pexip.android.wrapper.PexipOnly"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+</manifest>

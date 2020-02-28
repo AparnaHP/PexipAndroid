@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppThemeAlert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/grey</item>
+        <item name="android:textColorPrimary">@color/font_color</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+</resources>
